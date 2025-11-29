@@ -1,0 +1,138 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="client\**" />
+    <Compile Remove="masterserver\**" />
+    <Compile Remove="network\**" />
+    <EmbeddedResource Remove="client\**" />
+    <EmbeddedResource Remove="masterserver\**" />
+    <EmbeddedResource Remove="network\**" />
+    <None Remove="client\**" />
+    <None Remove="masterserver\**" />
+    <None Remove="network\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="FireAndForgetNAudioSample\CachedVolumeWaveProvider16.cs" />
+    <Compile Remove="FireAndForgetNAudioSample\UsageSnippet.cs" />
+    <Compile Remove="NAudio\MultiplexingWaveProvider.cs" />
+    <Compile Remove="NAudio\Pcm16BitToSampleProvider.cs" />
+    <Compile Remove="NAudio\SampleToWaveProvider16.cs" />
+    <Compile Remove="NAudio\WaveFileReader.cs" />
+    <Compile Remove="NAudio\WaveFloatTo16Provider.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>..\ActiveEQ\lib\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio">
+      <HintPath>..\ActiveEQ\lib\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core">
+      <HintPath>..\ActiveEQ\lib\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi">
+      <HintPath>..\ActiveEQ\lib\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi">
+      <HintPath>..\ActiveEQ\lib\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms">
+      <HintPath>..\ActiveEQ\lib\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM">
+      <HintPath>..\ActiveEQ\lib\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="REWD">
+      <HintPath>..\ActiveEQ\lib\REWD.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\ActiveEQ\lib\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1">
+      <HintPath>..\ActiveEQ\lib\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11">
+      <HintPath>..\ActiveEQ\lib\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>..\ActiveEQ\lib\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>lib\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.Windows.Core">
+      <HintPath>lib\System.Private.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="tUserInterface">
+      <HintPath>..\ActiveEQ\lib\tUserInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="sounds\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Inputs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="FireAndForgetNAudioSample\UsageSnippet.cs" />
+    <None Include="NAudio\MultiplexingWaveProvider.cs" />
+    <None Include="NAudio\Pcm16BitToSampleProvider.cs" />
+    <None Include="NAudio\SampleToWaveProvider16.cs" />
+    <None Include="NAudio\WaveFileReader.cs" />
+    <None Include="NAudio\WaveFloatTo16Provider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sounds\134070759146121129.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\134071169729541550.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\134071169944356283.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\134071170101322752.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-12-2025 12-02-11 AM.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-36-35 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-37-35 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-38-01 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-39-59 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-40-34 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-41-37 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sounds\Recorded-on_11-8-2025 3-42-06 PM.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

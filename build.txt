@@ -1,0 +1,11 @@
+0.0.49.0
+
+0.0.36.0
+> Commented out the BufferedWaveProvider as reading from the audio file was causing a null reference exception; no idea why unless I examine NAudio.
+
+0.0.37.0
+> Converted the VolumeWaveProvider16 to a SampleChannel.
+
+0.0.49.0
+> Created a set of arrays to managed individual audio volume and playback; it does not work quite right if more than one sound is queued up at once; as in it inherits the next sound volume's setting; but it stays persistent one sound at a time.
+> Effectively works as intended for now.
